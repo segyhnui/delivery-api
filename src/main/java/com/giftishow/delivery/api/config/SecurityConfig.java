@@ -17,6 +17,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/v1/api/bo/**").hasAnyRole("ADMIN")   // 특정 경로의 특정 권한을 검사함
                 .anyRequest().authenticated()
+
         ;
     }
 }
